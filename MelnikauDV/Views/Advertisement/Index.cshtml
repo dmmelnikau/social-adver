@@ -1,0 +1,72 @@
+﻿@model IndexViewModel
+@using MelnikauDV.Models
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    @@font-face {
+        font-family: 'FontAwesome';
+        src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal
+    }
+
+    .glyphicon {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale
+    }
+
+    .glyphicon-chevron-right:before {
+        content: "\f054";
+    }
+
+    .glyphicon-chevron-left:before {
+        content: "\f053";
+    }
+</style>
+<h4>Подача рекламы</h4>
+<p>
+    <a asp-action="Create">Разместить рекламу на сайте</a>
+</p>
+<div class="container d-flex flex-wrap">
+    @foreach (var item in Model.Advertisements)
+    {
+
+        var s = item.Company;
+        var firstWord = s.IndexOf(" ") > -1 ? s.Substring(0, s.IndexOf(" ")) : s;
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://loremflickr.com/g/150/150/@firstWord?lock=@item.AdvertisementId" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+                <h5 class="card-title">@item.Company</h5>
+                <p class="card-text">@item.Text</p>
+                <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.AdvertisementId">Изменить</a>
+                <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.AdvertisementId">Детали</a>
+                <a asp-action="Delete" class="btn btn-primary" asp-route-id="@item.AdvertisementId">Удалить</a>
+            </div>
+        </div>
+    }
+    @if (Model.PageViewModel.HasPreviousPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+           class="btn btn-outline-dark">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Назад
+        </a>
+    }
+    @if (Model.PageViewModel.HasNextPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+           class="btn btn-outline-dark">
+            Вперед
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    }
+</div>

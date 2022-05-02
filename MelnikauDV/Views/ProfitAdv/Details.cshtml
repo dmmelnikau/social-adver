@@ -1,0 +1,49 @@
+﻿@model MelnikauDV.Models.ProfitAdv
+
+@{
+    ViewData["Title"] = "Детали";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Детали</h1>
+
+<div>
+    <h4>Расчет прибыльности рекламы </h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Effort)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Effort)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PageViews)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PageViews)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.kef)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.kef)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Profit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Profit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Advertisement)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Advertisement.Company)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Изменить затраты</a> |
+    <a asp-action="Index">Назад</a>
+</div>

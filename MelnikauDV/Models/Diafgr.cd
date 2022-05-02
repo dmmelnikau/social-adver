@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MelnikauDV.Models.Advertisement">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDAAAAIA=</HashCode>
+      <FileName>Models\Advertisement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.AdvertisementContext">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACAAAABAAAAAAAAAEgAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AdvertisementContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.AdvMark">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACIAAAAQAA=</HashCode>
+      <FileName>Models\AdvMark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.ErrorViewModel">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.Filter">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAECAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Filter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.IndexViewModel">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IndexViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.PageViewModel">
+    <Position X="12.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.ProfitAdv">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAEABACAAAAAAAAAAAIAAAAQAA=</HashCode>
+      <FileName>Models\ProfitAdv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.User">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAACAAAAAAEAAAAAAAAAAAAACCAAAAAAAAAIA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.Role">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.Information.InfAdv">
+    <Position X="6" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAACA=</HashCode>
+      <FileName>Models\Information\InfAdv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.Information.Information">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Information\Information.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.LoginModel">
+    <Position X="10" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AccountModel\LoginModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Models.AccountModel.RegisterModel">
+    <Position X="11.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>Models\AccountModel\RegisterModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Controllers.AccountController">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAIAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Controllers.AdvertisementController">
+    <Position X="2.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAJBACAAAQAAAAAAAEAAEACQAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdvertisementController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Controllers.AdvMarkController">
+    <Position X="4.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQBBACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdvMarkController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Controllers.HomeController">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAIAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Controllers.ProfitAdvController">
+    <Position X="8.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABBACAAAAAAAAABBEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProfitAdvController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelnikauDV.Controllers.UserController">
+    <Position X="10.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABBQCAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UserController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

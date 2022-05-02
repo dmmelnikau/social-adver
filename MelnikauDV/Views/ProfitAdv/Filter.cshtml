@@ -1,0 +1,38 @@
+﻿@model MelnikauDV.Models.Filter
+
+@{
+    ViewBag.Title = "Фильтрация рекламы";
+}
+
+<h2>Фильтрация рекламы</h2>
+
+<form method="get">
+    <div class="form-inline form-group">
+        <label class="control-label">Прибыль: </label>
+        <input name="name" class="form-control" />
+
+        <label class="control-label">Компания: </label>
+        <select name="company" asp-items="Model.Advertisements" class="form-control"></select>
+
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>
+
+<table class="table table-striped">
+    <tr>
+        <th>Прибыль</th>
+        <th>Расходы</th>
+          <th>Просмотры</th>
+        <th>Компания</th>
+    </tr>
+
+    @foreach (var item in Model.Profits)
+    {
+<tr>
+    <td>@item.Profit</td>
+    <td>@item.Effort</td>
+    <td>@item.PageViews</td>
+    <td>@item.Advertisement.Company</td>
+</tr>
+    }
+</table>

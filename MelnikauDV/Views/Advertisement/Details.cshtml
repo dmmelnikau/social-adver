@@ -1,0 +1,75 @@
+﻿@model IndexViewModel
+@using MelnikauDV.Models
+@{
+    ViewData["Title"] = "Информация о рекламе";
+}
+<style>
+    @@font-face {
+        font-family: 'FontAwesome';
+        src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal
+    }
+
+    .glyphicon {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale
+    }
+
+    .glyphicon-chevron-right:before {
+        content: "\f054";
+    }
+
+    .glyphicon-chevron-left:before {
+        content: "\f053";
+    }
+</style>
+<h1>Детали</h1>
+
+<div>
+    <h4>Реклама</h4>
+    <hr />
+    @foreach (var item in Model.Advertisements)
+    {
+
+        var s = item.Company;
+        var firstWord = s.IndexOf(" ") > -1 ? s.Substring(0, s.IndexOf(" ")) : s;
+
+        <div class="card" style="width: 48rem;">
+            <img src="https://loremflickr.com/g/150/150/@firstWord?lock=@item.AdvertisementId" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+                <h5 class="card-title">@item.Company</h5>
+                <p class="card-text">@item.Text</p>
+            </div>
+        </div>
+       
+    }
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-left">
+                @foreach (var item in Model)
+                {
+
+                    Html.DisplayFor(modelItem => item.NumberOfLikes)
+            <button onclick="Edit(@item.Id,true)">Like</button>
+            @Html.DisplayFor(modelItem => item.NumberOfDislikes)
+
+            <button onclick="Edit(@item.Id,false)">Dislike</button>
+
+        }
+                <p> <b id="noOfVisitors">@ViewData["visitors"]</b> <span id="visitorsText"> @ViewData["visitors_txt"] </span> </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="form-row">
+      
+        <a asp-action="Index"><i class="fas fa-arrow-left"></i></a>
+
+    </div>
+</div>

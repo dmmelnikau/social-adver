@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MelnikauDV.Models.User>
+
+@{
+    ViewData["Title"] = "Управление пользователем";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Управление пользователями</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role.Id)
+            </td>
+            <td>
+                
+                
+                <a asp-action="Edit" asp-route-id="@item.Id">Смена данных</a> |
+              
+                <a asp-action="Delete" asp-route-id="@item.Id">Удаление пользователя</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
